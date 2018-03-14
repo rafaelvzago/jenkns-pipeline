@@ -1,2 +1,1 @@
-# maven-project
-Jenkins pipeline auto-code
+# jenkins-docker
