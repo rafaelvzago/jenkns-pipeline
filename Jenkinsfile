@@ -24,7 +24,7 @@ stages{
         }
 
         stage ('Deployments'){
-             { 
+             parallel{ 
                 stage ('Deploy to Staging'){
                     steps {
                         sh "scp -oStrictHostKeyChecking=no -i ~/keys-container/keeaccess.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
